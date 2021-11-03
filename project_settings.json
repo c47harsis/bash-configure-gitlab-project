@@ -1,0 +1,10 @@
+{
+  "merge_method":"ff",
+  "squash_option": "default_on",
+  "remove_source_branch_after_merge": true,
+  "default_branch": "mainline",
+  "ci_config_path": "dbp/.gitlab-ci.yml",
+  "only_allow_merge_if_pipeline_succeeds": true,
+  "only_allow_merge_if_all_discussions_are_resolved": true,
+  "build_timeout": 3600
+}

@@ -1,0 +1,5 @@
+{
+  "approvals_before_merge": 3,
+  "merge_requests_author_approval": false,
+  "reset_approvals_on_push": false
+}
