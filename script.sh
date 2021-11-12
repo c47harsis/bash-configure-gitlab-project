@@ -65,7 +65,7 @@ function print_message() {
 }
 
 function check_mainline() {
-  RESPONSE=$(curl -s -w "\n%{http_code}" -X GET "$API_URL/projects/$REPO_NAME_URLENCODED/repository/branches/mainline2" \
+  RESPONSE=$(curl -s -w "\n%{http_code}" -X GET "$API_URL/projects/$REPO_NAME_URLENCODED/repository/branches/mainline" \
   -H "PRIVATE-TOKEN: $PRIVATE_TOKEN")
 
   RESPONSE_STATUS=$(echo "$RESPONSE" | tail -n1)
@@ -92,7 +92,7 @@ function create_branch() {
   read -r -p "Enter the branch name or commit SHA to create branch from: " BRANCH_FROM
 
   RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-  "$API_URL/projects/$REPO_NAME_URLENCODED/repository/branches?branch=mainline2&ref=$BRANCH_FROM" \
+  "$API_URL/projects/$REPO_NAME_URLENCODED/repository/branches?branch=mainline&ref=$BRANCH_FROM" \
   -H "PRIVATE-TOKEN: $PRIVATE_TOKEN")
 
   RESPONSE_STATUS=$(echo "$RESPONSE" | tail -n1)
